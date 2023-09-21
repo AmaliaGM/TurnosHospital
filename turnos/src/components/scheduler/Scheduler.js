@@ -1,6 +1,8 @@
 import { Component } from "react";
+import 'dhtmlx-scheduler';
+import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css';
 
-const scheduler = window.schedulerñ
+const scheduler = window.scheduler
 
 export default class Scheduler extends Component {
     componentDidMount() {
@@ -10,9 +12,9 @@ export default class Scheduler extends Component {
             'week',
             'month',
             'date',
-            'ant',
-            'hoy',
-            'post'
+            'prev',
+            'today',
+            'next'
         ];
 
         const { events } = this.props;

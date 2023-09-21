@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Scheduler from './components/scheduler';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const data = [
+  { start_date:'2023-10-15 5:00', end_date:'2023-10-15 9:00', text: 'event 1', id: 1},
+  { start_date:'2023-10-18 5:00', end_date:'2023-10-18 9:00', text: 'event 2', id: 2},
+];
 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="scheduler-container">
+          <Scheduler events={data}/>
+        </div>
+      </div>
+    );
+  }
+}
 export default App;
